@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<HTML>   
+<BODY>
+<CANVAS ID="myCanvas" width="300" height="300" style="border:1px solid black">
+</CANVAS>
+<SCRIPT>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var grad=ctx.createRadialGradient(75,50,5,90,60,100);
+grad.addColorStop(0.2,"orange");
+grad.addColorStop(0.4,"green");
+grad.addColorStop(0.6,"yellow");
+grad.addColorStop(0.8,"red");
+ctx.fillStyle=grad;
+ctx.beginPath();
+ctx.arc(80, 90, 50, 0, Math.PI*2, false);
+ctx.fill();
+ctx.closePath();
+</SCRIPT>
+</BODY>
+</HTML>
